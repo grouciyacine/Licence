@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework import serializers,validators
-from .models import Posts
+from .models import Posts,Book,Excel
 from django.contrib.auth.hashers import make_password,check_password
 """
 class NPKSerializer(serializers.ModelSerializer):
@@ -26,6 +26,15 @@ class Camera(serializers.ModelSerializer):
         model=Camera
         fields='__all__'                    
 """
+class JsonSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Excel
+        #fields=('ticker','volume')
+        fields='__all__'
+class BookSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Book
+        fields = ['cover']
 class DataSerializer(serializers.ModelSerializer):
     class Meta:
         model=Posts

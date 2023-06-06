@@ -1,5 +1,9 @@
 {
     "cSpell.words": [
-        "Djangocrudapp"
+        "authtoken",
+        "Djangocrudapp",
+        "filname",
+        "iqwui",
+        "viewsets"
     ]
 }
